@@ -52,25 +52,19 @@ def submit_mcq():
 def get_submissions():
     try:
         submissions = MCQSubmission.query.all()
-        submissions_data = []
-        
-        for submission in submissions:
-            submissions_data.append({
-                'submissionId': submission.id,
-                'mcqId': submission.mcq_id,
-                'username': submission.username,
-                'selectedAnswer': submission.selected_answer,
-                'correctAnswer': submission.correct_answer,
-                'isCorrect': submission.is_correct,
-                'submittedAt': submission.submitted_at.strftime('%Y-%m-%d %H:%M:%S')
-            })
-        
         return jsonify({
             'success': True,
-            'data': submissions_data,
-            'count': len(submissions_data)
+            'data': [{
+                'id': sub.id,
+                'mcqId': sub.mcq_id,
+                'username': sub.username,
+                'selectedAnswer': sub.selected_answer,
+                'correctAnswer': sub.correct_answer,
+                'isCorrect': sub.is_correct,
+                'submittedAt': sub.submitted_at.isoformat()
+            } for sub in submissions],
+            'count': len(submissions)
         }), 200
-
     except Exception as e:
         return jsonify({
             'success': False,
