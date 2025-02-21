@@ -33,8 +33,6 @@ def generate_hint():
                 'message': f'Missing required field: {field}'
             }), 400
 
-    hint_generator = HintGenerator()
-    
     # Validate inputs
     validation_result = hint_generator.validate_inputs(
         data['question'],
