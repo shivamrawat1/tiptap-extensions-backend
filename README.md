@@ -1,7 +1,7 @@
 ## Demo
 [Link](https://www.loom.com/share/17f1ca0c70d44952a69823292ff23017?sid=5a48a226-86e7-47a5-aaab-3de9a6671f1e)
 
-Link to frontend repo: https://github.com/shivamrawat1/tiptap
+Link to frontend repo: https://github.com/shivamrawat1/tiptap-extensions-frontend
 
 # Interactive Code Learning Platform
 Implemented custom extensions for the TipTap editor.
@@ -20,7 +20,7 @@ Implemented custom extensions for the TipTap editor.
 1. Navigate to the backend directory
 
 ```bash
-cd tiptap-backend
+cd tiptap-extensions-backend
 ```
 2. Create and Activate a virtual environment
 
