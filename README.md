@@ -20,7 +20,7 @@ Implemented custom extensions for the TipTap editor.
 1. Navigate to the backend directory
 
 ```bash
-cd backend
+cd tiptap-backend
 ```
 2. Create and Activate a virtual environment
 
